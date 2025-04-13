@@ -240,5 +240,10 @@ public final class UsageDefinition implements Serializable {
     public UsageDefinition build() {
       return new UsageDefinition(directive, optionalCnt, tokens);
     }
+
+      public Builder withRequiredArg(String sizeColumn) {
+        define(sizeColumn, TokenType.COLUMN_NAME, false);
+        return this;
+      }
   }
 }

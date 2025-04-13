@@ -1,0 +1,7 @@
+Prompt: "How to add new tokens to ANTLR grammar in a Java project"
+Prompt: "Java class to parse '1.5MB' and convert to bytes"
+Prompt: "Create a Wrangler directive that aggregates values across rows"
+Prompt: "How to unit test a Wrangler directive using TestingRig"
+Prompt: "Fix: Cannot resolve symbol 'TestingRig' or 'TestRecipe' in Wrangler"
+Prompt: "How to wire up ByteSize token in visitValue() using RecipeVisitor"
+Prompt: "How to register and use a new directive in CDAP Wrangler"

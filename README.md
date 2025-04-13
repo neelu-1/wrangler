@@ -164,6 +164,45 @@ These directives are currently available:
 | [JSON](wrangler-docs/functions/json-functions.md)                               | Functions that can be useful in transforming your data           |
 | [Types](wrangler-docs/functions/type-functions.md)                              | Functions for detecting the type of data                         |
 
+## ✅ Added Features in This Assignment
+
+### 1. Byte Size & Time Duration Parsing
+- Extended the Wrangler grammar to support:
+    - Byte units: `B`, `KB`, `MB`, `GB`, `TB`
+    - Time units: `ms`, `s`, `sec`, `m`, `min`
+- Implemented `ByteSize` and `TimeDuration` classes in `wrangler-api`
+- Integrated them into Wrangler's parser (`RecipeVisitor`) for full recipe support
+
+---
+
+### 2. New Directive: `aggregate-stats`
+- A directive that:
+    - Accepts a size and time column
+    - Aggregates total size (in MB) and time (in seconds)
+    - Returns a single result row with `total_size_mb` and `total_time_sec`
+
+
+#### ✅ Sample Input:
+
+| size  | time  |
+|-------|-------|
+| 1MB   | 1s    |
+| 512KB | 500ms |
+
+#### ✅ Output:
+
+| total_size_mb | total_time_sec |
+|---------------|----------------|
+| 1.5           | 1.5            |
+
+---
+
+### 3. Tests
+- Added unit tests for:
+    - `ByteSize.java`
+    - `TimeDuration.java`
+    - `AggregateStats.java` using `TestingRig` and `TestRecipe`
+
 ## Performance
 
 Initial performance tests show that with a set of directives of high complexity for
